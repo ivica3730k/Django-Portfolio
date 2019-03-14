@@ -9,11 +9,12 @@ from filebrowser.sites import site
 
 
 urlpatterns = [
+    path('',views.index),
+
+
     url(r'^tinymce/',include('tinymce.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^admin/filebrowser/', site.urls),
-    path('post/<int:post_id>',views.postEntry),
-    path('',views.index),
+    url(r'^admin/filebrowser/', site.urls),   
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
