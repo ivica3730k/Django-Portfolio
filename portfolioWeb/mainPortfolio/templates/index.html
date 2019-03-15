@@ -54,29 +54,48 @@
         </div>
     </header>
     <!-- #header -->
-    <div class="d-none d-lg-block">hide on screens smaller than lg</div>
 
     <!-- start banner Area -->
     <section class="banner-area">
         <div class="container">
-            <div class="row fullscreen align-items-center justify-content-between">
-                <div class="col-lg-6 col-md-6 banner-left">
-                    <h6>{{head.intro}}</h6>
-                    <h1>{{head.heading}}</h1>
-                    <p>
-                        {{head.description}}
 
-                    </p>
+            <div class="d-none d-md-block">
+                <!-- if it is not small device -->
+                <div class="row fullscreen align-items-center justify-content-between">
+                    <div class="col-lg-6 col-md-6 banner-left">
+                        <h6>{{head.intro}}</h6>
+                        <h1>{{head.heading}}</h1>
+                        <p>
+                            {{head.description}}
 
-                    <a href="#" class="primary-btn text-uppercase">discover now</a>
+                        </p>
+
+                        <a href="#" class="primary-btn text-uppercase">discover now</a>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
+                        <img class="img-fluid" src="{{head.image.url}}" alt="">
+
+                    </div>
+
                 </div>
 
-                <div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
-                    <img class="img-fluid d-none d-md-block " src="{{head.image.url}}" alt="">
+                <div class="d-md-none">
 
+                    <!-- if it is small device -->
+                    <div class="row  align-items-center justify-content-between">
+                        <div class="col-lg-6 col-md-6 banner-left">
+                            <h6>{{head.intro}}</h6>
+                            <h1>{{head.heading}}</h1>
+                            <p>
+                                {{head.description}}
+
+                            </p>
+
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-        </div>
     </section>
     <!-- End banner Area -->
 
