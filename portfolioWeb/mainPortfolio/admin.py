@@ -6,3 +6,6 @@ admin.site.register(facts)
 admin.site.register(skills)
 admin.site.register(aboutMe)
 admin.site.register(header)
+admin.site.register(expertises)
+admin.site.register(qualifications)
+

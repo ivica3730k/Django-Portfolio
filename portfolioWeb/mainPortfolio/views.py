@@ -9,6 +9,12 @@ class indexData():
         self.skills = skills.objects.order_by('id')
         self.facts = facts.objects.order_by('id')
     
+class aboutData():
+    def __init__(self):
+        self.aboutMe = aboutMe.objects.latest('id')
+        self.expertises = expertises.objects.order_by('id')
+        self.qualifications = qualifications.objects.order_by('id')
+
 
 
 def index(request):
@@ -19,6 +25,17 @@ def index(request):
         'aboutMe':data.aboutMe,
         'skills':data.skills,
         'facts':data.facts,
+    }
+    return HttpResponse(template.render(context,request))
+
+def about(request):
+    template = loader.get_template('about.html')
+    data = aboutData()
+    #custom code goes here
+    context = {
+        'aboutMe':data.aboutMe,
+        'expertises':data.expertises,
+        'qualifications':data.qualifications,
     }
     return HttpResponse(template.render(context,request))
 
