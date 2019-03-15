@@ -3,11 +3,13 @@ from mainPortfolio.models import *
 from django.template import loader
 
 class indexData():
-    header = header.objects.latest('id')
-    aboutMe = aboutMe.objects.latest('id')
-    skills = skills.objects.order_by('id')
-    facts = facts.objects.order_by('id')
+    def __init__(self):
+        self.header = header.objects.latest('id')
+        self.aboutMe = aboutMe.objects.latest('id')
+        self.skills = skills.objects.order_by('id')
+        self.facts = facts.objects.order_by('id')
     
+
 
 def index(request):
     data = indexData()
