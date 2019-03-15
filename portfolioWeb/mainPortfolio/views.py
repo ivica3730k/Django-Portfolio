@@ -13,7 +13,7 @@ class aboutData():
     def __init__(self):
         self.aboutMe = aboutMe.objects.latest('id')
         self.expertises = expertises.objects.order_by('id')
-        self.qualifications = qualifications.objects.order_by('id')
+        self.qualifications = qualifications.objects.order_by('id').reverse()
 
 
 
