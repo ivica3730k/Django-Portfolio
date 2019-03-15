@@ -79,7 +79,7 @@
                     <h1 class="text-uppercase">text{{aboutMe.mainHeadline}}</h1>
                     <p>
                         {% autoescape off %}{{aboutMe.shortIntro}}{% endautoescape %}
-                        
+
                     </p>
                     <!--<a href="#" class="primary-btn text-uppercase">View Full Details</a>-->
                 </div>
@@ -88,21 +88,22 @@
 
                 </div>
             </div>
+            <div>
+                <h4 class="pt-60">My Expertises</h4>
+                <div class="row">
+                    {%for expertise in expertises%}
+                    <div class="col-6 col-lg-6 col-sm-12 col-12">
 
-            <h4 class="pt-260">My Expertises</h4>
-            <div class="row">
-                {%for expertise in expertises%}
-                <div class="col-6 col-lg-6 col-sm-12 col-12">
+                        <div class="single-skill">
 
-                    <div class="single-skill">
-
-                        <p>
-                            {{expertise.name}} {{expertise.percentage}} %
-                        </p>
-                        <div class="skill" data-width="{{expertise.percentage}}"></div>
+                            <p>
+                                {{expertise.name}} {{expertise.percentage}} %
+                            </p>
+                            <div class="skill" data-width="{{expertise.percentage}}"></div>
+                        </div>
                     </div>
+                    {%endfor%}
                 </div>
-                {%endfor%}
             </div>
         </div>
     </section>
