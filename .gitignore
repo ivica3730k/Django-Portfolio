@@ -117,7 +117,5 @@ media/
 #vscode
 .vscode
 
-#wsgi
-wsgi.py
-settings.py
+
 keys.py
