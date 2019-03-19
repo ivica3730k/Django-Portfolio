@@ -41,8 +41,9 @@ def about(request):
 
 def mywork(request):
     template = loader.get_template('mywork.html')
+    projectsList = projects.objects.order_by('id')
     context = {
-
+        'projects':projectsList,
     }
     return HttpResponse(template.render(context,request))
 

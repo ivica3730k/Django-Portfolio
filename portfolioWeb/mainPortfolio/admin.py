@@ -8,4 +8,6 @@ admin.site.register(aboutMe)
 admin.site.register(header)
 admin.site.register(expertises)
 admin.site.register(qualifications)
+admin.site.register(projects)
+admin.site.register(socialLinks)
 

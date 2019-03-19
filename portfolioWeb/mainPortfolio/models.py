@@ -71,3 +71,25 @@ class qualifications(models.Model):
         verbose_name_plural = "My Qualifications"
     title = models.CharField(max_length = 100)
     content = HTMLField('About qualification')
+
+class projects(models.Model):
+    def __str__(self):
+        return str(self.name)
+    class Meta:
+        verbose_name = "Project"
+        verbose_name_plural = "My Projects"
+    name = models.CharField(max_length = 100)
+    description = HTMLField('Describe your project:')
+
+class socialLinks(models.Model):
+    def __str__(self):
+        return str("Social link set")
+    class Meta:
+        verbose_name = "Social link-set"
+        verbose_name_plural = "My Social links"
+    facebook = models.URLField()
+    twitter = models.URLField()
+    linkedin = models.URLField()
+    github = models.URLField()
+    youtube = models.URLField()
+    
