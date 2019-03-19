@@ -39,3 +39,10 @@ def about(request):
     }
     return HttpResponse(template.render(context,request))
 
+def mywork(request):
+    template = loader.get_template('mywork.html')
+    context = {
+
+    }
+    return HttpResponse(template.render(context,request))
+
