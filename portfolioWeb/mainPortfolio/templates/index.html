@@ -54,7 +54,7 @@
         </div>
     </header>
     <!--Header-end-->
-
+    {%if head%}
     <!-- start banner Area -->
     <section class="banner-area">
         <div class="container">
@@ -98,9 +98,11 @@
 
              
     </section>
+    {%endif%}
     <!-- End banner Area -->
 
     <!-- Start home-about Area -->
+    {%if aboutMe%}
     <section class="home-about-area pt-120">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -118,6 +120,7 @@
             </div>
         </div>
     </section>
+    {%endif%}
     <!-- End home-about Area -->
 
     <!-- Start services Area -->
