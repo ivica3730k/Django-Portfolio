@@ -13,7 +13,6 @@ urlpatterns = [
     path('',views.index),
     path('about/',views.about),
     path('mywork/',views.mywork),
-    
     url(r'^tinymce/',include('tinymce.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^admin/filebrowser/', site.urls),
