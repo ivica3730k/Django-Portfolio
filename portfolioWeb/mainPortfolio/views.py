@@ -4,16 +4,22 @@ from django.template import loader
 
 class indexData():
     def __init__(self):
-        self.header = header.objects.latest('id')
-        self.aboutMe = aboutMe.objects.latest('id')
-        self.skills = skills.objects.order_by('id')
-        self.facts = facts.objects.order_by('id')
+        try:
+            self.header = header.objects.latest('id')
+            self.aboutMe = aboutMe.objects.latest('id')
+            self.skills = skills.objects.order_by('id')
+            self.facts = facts.objects.order_by('id')
+        except:
+            self.header = self.aboutMe = self.skills = self.facts = []
     
 class aboutData():
     def __init__(self):
-        self.aboutMe = aboutMe.objects.latest('id')
-        self.expertises = expertises.objects.order_by('id')
-        self.qualifications = qualifications.objects.order_by('id').reverse()
+        try:
+            self.aboutMe = aboutMe.objects.latest('id')
+            self.expertises = expertises.objects.order_by('id')
+            self.qualifications = qualifications.objects.order_by('id').reverse()
+        except:
+            self.aboutMe = self.expertises = self.qualifications = []
 
 
 
