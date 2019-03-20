@@ -31,6 +31,13 @@
     <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 
+    <style>
+    section{
+        margin-bottom: 120px;
+        margin-top: 0px;
+    }
+    </style>
+
 </head>
 
 <body>
@@ -57,8 +64,9 @@
     <!--Header-end-->
     
     <!-- start banner Area -->
-    {%if head%}
+    
     <section class="banner-area">
+        {%if head%}
         <div class="container">
 
                 <div class="d-md-none">
@@ -97,16 +105,16 @@
                     </div>
 
                 </div>
-
-             
+        {%endif%}       
     </section>
-    {%endif%}
+    
     
     <!-- End banner Area -->
 
     <!-- Start home-about Area -->
-    {%if aboutMe%}
-    <section class="home-about-area pt-120">
+    
+    <section class="home-about-area">
+        {%if aboutMe%}
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6 home-about-left">
@@ -122,14 +130,16 @@
                 </div>
             </div>
         </div>
+        {%endif%}
     </section>
-    {%endif%}
+    
     
     <!-- End home-about Area -->
 
     <!-- Start services Area -->
-    {%if skills%}
+    
     <section class="services-area section-gap">
+        {%if skills%}
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="menu-content  col-lg-7">
@@ -153,14 +163,16 @@
                 {%endfor%}
             </div>
         </div>
+        {%endif%}
     </section>
-    {%endif%}
+    
     
     <!-- End services Area -->
 
     <!-- Start fact Area -->
-    {%if facts%}
-    <section class="facts-area section-gap" id="facts-area">
+    
+    <section class="facts-area section-gap" id="facts-area" style ="margin-bottom:0px;">
+        {%if facts%}
         <div class="container">
             <div class="row">
                 {%for fact in facts%}
@@ -172,8 +184,9 @@
 
             </div>
         </div>
+        {%endif%}
     </section>
-    {%endif%}
+    
     <!-- end fact Area -->
 
     <!-- start footer Area -->
