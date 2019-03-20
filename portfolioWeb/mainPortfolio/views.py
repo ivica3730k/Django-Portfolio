@@ -10,7 +10,7 @@ class indexData():
             self.skills = skills.objects.order_by('id')
             self.facts = facts.objects.order_by('id')
         except:
-            self.header = self.aboutMe = self.skills = self.facts = None
+            self.header = self.aboutMe = self.skills = self.facts = False
     
 class aboutData():
     def __init__(self):
@@ -19,7 +19,7 @@ class aboutData():
             self.expertises = expertises.objects.order_by('id')
             self.qualifications = qualifications.objects.order_by('id').reverse()
         except:
-            self.aboutMe = self.expertises = self.qualifications = None
+            self.aboutMe = self.expertises = self.qualifications = False
 
 
 
