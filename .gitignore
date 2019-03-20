@@ -104,8 +104,6 @@ ENV/
 .DS_Store
 *.sqlite3
 media/
-static/
-!* portfolioWeb/mainPortfolio/static
 *.pyc
 *.db
 *.pid
