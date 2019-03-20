@@ -4,22 +4,20 @@ from django.template import loader
 
 class indexData():
     def __init__(self):
-        try:
-            self.header = header.objects.latest('id')
-            self.aboutMe = aboutMe.objects.latest('id')
-            self.skills = skills.objects.order_by('id')
-            self.facts = facts.objects.order_by('id')
-        except:
-            self.header = self.aboutMe = self.skills = self.facts = False
+
+        self.header = header.objects.latest('id')
+        self.aboutMe = aboutMe.objects.latest('id')
+        self.skills = skills.objects.order_by('id')
+        self.facts = facts.objects.order_by('id')
+     
     
 class aboutData():
     def __init__(self):
-        try:
-            self.aboutMe = aboutMe.objects.latest('id')
-            self.expertises = expertises.objects.order_by('id')
-            self.qualifications = qualifications.objects.order_by('id').reverse()
-        except:
-            self.aboutMe = self.expertises = self.qualifications = False
+        
+        self.aboutMe = aboutMe.objects.latest('id')
+        self.expertises = expertises.objects.order_by('id')
+        self.qualifications = qualifications.objects.order_by('id').reverse()
+        self.aboutMe = self.expertises = self.qualifications = False
 
 
 
