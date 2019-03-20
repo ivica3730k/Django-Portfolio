@@ -1,251 +1,200 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
-
-<head>
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
-    <!-- Author Meta -->
-    <meta name="author" content="colorlib">
-    <!-- Meta Description -->
-    <meta name="description" content="">
-    <!-- Meta Keyword -->
-    <meta name="keywords" content="">
-    <!-- meta character set -->
-    <meta charset="UTF-8">
-    <!-- Site Title -->
-    <title>Personal</title>
-
-    <!--CSS START-->
-    <div>
-        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/linearicons.css'%}">
-        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
-        <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
-        <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
-        <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
-        <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
-        <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
-        <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    </div>
-    <!--CSS END-->
-</head>
-
-<body>
-     <!--Header start-->
-     <header id="header">
-            <div class="container main-menu">
-                <div class="row align-items-center justify-content-between d-flex">
-                    <div id="logo">
-                        <a href="index.html"><img src="{%static 'img/logo.png'%}" alt="" title="" /></a>
-                    </div>
-                    <nav id="nav-menu-container">
-                        <ul class="nav-menu">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About me</a></li>
-                            <li><a href="/mywork">My work</a></li>
-                            
-                        </ul>
-                    </nav>
-                    <!-- #nav-menu-container -->
-                </div>
+   <head>
+      <!-- Mobile Specific Meta -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Favicon-->
+      <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+      <!-- Author Meta -->
+      <meta name="author" content="colorlib">
+      <!-- Meta Description -->
+      <meta name="description" content="">
+      <!-- Meta Keyword -->
+      <meta name="keywords" content="">
+      <!-- meta character set -->
+      <meta charset="UTF-8">
+      <!-- Site Title -->
+      <title>Personal</title>
+      <!--CSS START-->
+      <div>
+         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+         <link rel="stylesheet" href="{% static 'css/linearicons.css'%}">
+         <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+         <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+         <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+         <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+         <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
+         <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
+         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+      </div>
+      <style>
+         section{
+         margin-bottom: 120px;
+         margin-top: 0px;
+         }
+      </style>
+      <!--CSS END-->
+   </head>
+   <body>
+      <!--Header start-->
+      <header id="header">
+         <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+               <div id="logo">
+                  <a href="index.html"><img src="{%static 'img/logo.png'%}" alt="" title="" /></a>
+               </div>
+               <nav id="nav-menu-container">
+                  <ul class="nav-menu">
+                     <li><a href="/">Home</a></li>
+                     <li><a href="/about">About me</a></li>
+                     <li><a href="/mywork">My work</a></li>
+                  </ul>
+               </nav>
+               <!-- #nav-menu-container -->
             </div>
-        </header>
-        <!--Header-end-->
-
-    <!-- start banner Area -->
-    <section class="about-banner">
-        <div class="container">
+         </div>
+      </header>
+      <!--Header-end-->
+      <!-- start banner Area -->
+      <section class="about-banner">
+         <div class="container">
             <div class="row d-flex align-items-center justify-content-center">
-                <div class="about-content col-lg-12">
-                    <h1 class="text-white">About Me</h1>
-                    <p class="text-white link-nav"><a href="/">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="#"> About Me</a></p>
-                </div>
+               <div class="about-content col-lg-12">
+                  <h1 class="text-white">About Me</h1>
+                  <p class="text-white link-nav"><a href="/">Home </a> <span class="lnr lnr-arrow-right"></span> <a href="#"> About Me</a></p>
+               </div>
             </div>
-        </div>
-    </section>
-    <!-- End banner Area -->
-
-    <!-- Start home-about Area -->
-    
-    <section class="home-about-area pt-40">
-        <div class="container">
+         </div>
+      </section>
+      <!-- End banner Area -->
+      <!-- Start home-about Area -->
+      <section class="home-about-area">
+         <div class="container">
+            {%if aboutMe %}
             <div class="row align-items-center justify-content-between">
-                <div class="col-lg-6 col-md-6 home-about-left">
-                    <img class="img-fluid" src="{{aboutMe.image.url}}" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6 home-about-right">
-                    <h6>About Me</h6>
-                    <h1 class="text-uppercase">text{{aboutMe.mainHeadline}}</h1>
-                    <p>
-                        {% autoescape off %}{{aboutMe.shortIntro}}{% endautoescape %}
-
-                    </p>
-                    <!--<a href="#" class="primary-btn text-uppercase">View Full Details</a>-->
-                </div>
-                <div class="col-lg-12 pt-30">
-                    {% autoescape off %}{{ aboutMe.mainContent }}{% endautoescape %}
-
-                </div>
+               <div class="col-lg-6 col-md-6 home-about-left">
+                  <img class="img-fluid" src="{{aboutMe.image.url}}" alt="">
+               </div>
+               <div class="col-lg-6 col-md-6 home-about-right">
+                  <h6>About Me</h6>
+                  <h1 class="text-uppercase">text{{aboutMe.mainHeadline}}</h1>
+                  <p>
+                     {% autoescape off %}{{aboutMe.shortIntro}}{% endautoescape %}
+                  </p>
+                  <!--<a href="#" class="primary-btn text-uppercase">View Full Details</a>-->
+               </div>
+               <div class="col-lg-12 pt-30">
+                  {% autoescape off %}{{ aboutMe.mainContent }}{% endautoescape %}
+               </div>
             </div>
+            {%endif%}
+            {%if expertises%}
             <div>
-                <h4 class="pt-60">My Expertises</h4>
-                <div class="row skillbar-wraps">
-                    {%for expertise in expertises%}
-                    <div class="col-6 col-lg-6 col-sm-12 col-12">
-
-                        <div class="single-skill">
-
-                            <p>
-                                {{expertise.name}} {{expertise.percentage}} %
-                            </p>
-                            <div class="skill" data-width="{{expertise.percentage}}"></div>
-                        </div>
-                    </div>
-                    {%endfor%}
-                </div>
+               <h4 class="pt-60">My Expertises</h4>
+               <div class="row skillbar-wraps">
+                  {%for expertise in expertises%}
+                  <div class="col-6 col-lg-6 col-sm-12 col-12">
+                     <div class="single-skill">
+                        <p>
+                           {{expertise.name}} {{expertise.percentage}} %
+                        </p>
+                        <div class="skill" data-width="{{expertise.percentage}}"></div>
+                     </div>
+                  </div>
+                  {%endfor%}
+               </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- End home-about Area -->
-
-    <!-- Start timeline Area -->
-    <section class="timeline pt-60">
-        <div class="text-center">
+            {%endif%}
+         </div>
+      </section>
+      <!-- End home-about Area -->
+      <!-- Start timeline Area -->
+      <section class="timeline">
+         {%if qualifications%}
+         <div class="text-center">
             <div class="menu-content pb-60">
-                <div class="title text-center">
-                    <h1 class="mb-10">My Qualifications</h1>
-                </div>
+               <div class="title text-center">
+                  <h1 class="mb-10">My Qualifications</h1>
+               </div>
             </div>
-        </div>
-        <ul>
+         </div>
+         <ul>
             {%for qualification in qualifications%}
             <li>
-                <div class="content">
-                    <h4>
-			          <time>{{qualification.title}}</time>
-                    </h4> {% autoescape off %}{{qualification.content}}{% endautoescape %}
-
-                </div>
+               <div class="content">
+                  <h4>
+                     <time>{{qualification.title}}</time>
+                  </h4>
+                  {% autoescape off %}{{qualification.content}}{% endautoescape %}
+               </div>
             </li>
             {%endfor%}
-
-        </ul>
-    </section>
-
-    <!-- End timeline Area -->
-
-    <!-- Start testimonial Area -->
-    <section class="testimonial-area section-gap">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="menu-content pb-70 col-lg-8">
-                    <div class="title text-center">
-                        <h1 class="mb-10">Client’s Feedback About Me</h1>
-                        <p>It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.</p>
-                    </div>
-                </div>
-            </div>
+         </ul>
+         {%endif%}
+      </section>
+      <!-- End timeline Area -->
+      <!-- start footer Area -->
+      <footer class="footer-area pt-20" style ="margin-bottom: 0px;">
+         <div class="container">
             <div class="row">
-                <div class="active-testimonial">
-                    <div class="single-testimonial item d-flex flex-row">
-                        <div class="thumb">
-                            <img class="img-fluid" src="" alt="">
-                        </div>
-                        <div class="desc">
-                            <p>
-                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
-                            </p>
-                            <h4>Harriet Maxwell</h4>
-                            <p>CEO at Google</p>
-                        </div>
-                    </div>
-                    <div class="single-testimonial item d-flex flex-row">
-                        <div class="thumb">
-                            <img class="img-fluid" src="" alt="">
-                        </div>
-                        <div class="desc">
-                            <p>
-                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
-                            </p>
-                            <h4>Carolyn Craig</h4>
-                            <p>CEO at Facebook</p>
-                        </div>
-                    </div>
-                </div>
+               <div class="col-lg-5 col-md-6 col-sm-6">
+                  <div class="single-footer-widget">
+                     <h4>About Me</h4>
+                     <p>
+                        We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-5 col-md-6 col-sm-6">
+                  <div class="single-footer-widget">
+                     <h4>This page...</h4>
+                     <p>was made using Django, graphical template provided by colorlib</p>
+                     <p class="footer-text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                           document.write(new Date().getFullYear());
+                        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                  <div class="single-footer-widget">
+                     <h4>Follow Me</h4>
+                     <p>Let us be social</p>
+                     <div class="footer-social d-flex align-items-center">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
-    <!-- End testimonial Area -->
-
-    <!-- start footer Area -->
-    <footer class="footer-area pt-20">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h4>About Me</h4>
-                        <p>
-                            We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h4>This page...</h4>
-                        <p>was made using Django, graphical template provided by colorlib</p>
-                        <p class="footer-text">
-
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-                    <div class="single-footer-widget">
-                        <h4>Follow Me</h4>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-github"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer Area -->
-    <!-- Start Including scripts-->
-    <div>
-        <script src="{% static 'js/vendor/jquery-2.2.4.min.js'%}"></script>
-        <script src="{% static 'js/popper.min.js'%}"></script>
-        <script src="{% static 'js/vendor/bootstrap.min.js'%}"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-        <script src="{% static 'js/easing.min.js'%}"></script>
-        <script src="{% static 'js/hoverIntent.js'%}"></script>
-        <script src="{% static 'js/superfish.min.js'%}"></script>
-        <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
-        <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
-        <script src="{% static 'js/jquery.tabs.min.js'%}"></script>
-        <script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
-        <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
-        <script src="{% static 'js/waypoints.min.js'%}"></script>
-        <script src="{% static 'js/jquery.counterup.min.js'%}"></script>
-        <script src="{% static 'js/simple-skillbar.js'%}"></script>
-        <script src="{% static 'js/owl.carousel.min.js'%}"></script>
-        <script src="{% static 'js/mail-script.js'%}"></script>
-        <script src="{% static 'js/main.js'%}"></script>
-    </div>
-    <!--End including scripts-->
-</body>
+         </div>
+      </footer>
+      <!-- End footer Area -->
+      <!-- Start Including scripts-->
+      <div>
+         <script src="{% static 'js/vendor/jquery-2.2.4.min.js'%}"></script>
+         <script src="{% static 'js/popper.min.js'%}"></script>
+         <script src="{% static 'js/vendor/bootstrap.min.js'%}"></script>
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+         <script src="{% static 'js/easing.min.js'%}"></script>
+         <script src="{% static 'js/hoverIntent.js'%}"></script>
+         <script src="{% static 'js/superfish.min.js'%}"></script>
+         <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+         <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+         <script src="{% static 'js/jquery.tabs.min.js'%}"></script>
+         <script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
+         <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+         <script src="{% static 'js/waypoints.min.js'%}"></script>
+         <script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+         <script src="{% static 'js/simple-skillbar.js'%}"></script>
+         <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+         <script src="{% static 'js/mail-script.js'%}"></script>
+         <script src="{% static 'js/main.js'%}"></script>
+      </div>
+      <!--End including scripts-->
+   </body>
