@@ -104,6 +104,7 @@ ENV/
 .DS_Store
 *.sqlite3
 media/
+static/
 *.pyc
 *.db
 *.pid
@@ -119,5 +120,3 @@ media/
 
 
 keys.py
-settings.py
-portfolioWeb/portfolioWeb/settings.py
