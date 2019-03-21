@@ -20,6 +20,18 @@ class indexData():
             self.facts = facts.objects.order_by('id')
         except:
             self.facts = False
+        
+class getsocialLinks():
+    def __init__(self):
+        try:
+            self.data = socialLinks.objects.latest('id')
+            self.valid = True
+            self.facebook = self.data.facebook
+            self.linkedin = self.data.linkedin
+            self.github = self.data.github
+            
+        except:
+            self.valid = False
 
     
 class aboutData():
@@ -43,30 +55,35 @@ class aboutData():
 def index(request):
     data = indexData()
     template = loader.get_template('index.html')
+    socialData = getsocialLinks()
     context = {
         'head':data.header,
         'aboutMe':data.aboutMe,
         'skills':data.skills,
         'facts':data.facts,
+        'social':socialData,
     }
     return HttpResponse(template.render(context,request))
 
 def about(request):
     template = loader.get_template('about.html')
     data = aboutData()
-    #custom code goes here
+    socialData = getsocialLinks()
     context = {
         'aboutMe':data.aboutMe,
         'expertises':data.expertises,
         'qualifications':data.qualifications,
+        'social':socialData,
     }
     return HttpResponse(template.render(context,request))
 
 def mywork(request):
     template = loader.get_template('mywork.html')
     projectsList = projects.objects.order_by('order')
+    socialData = getsocialLinks()
     context = {
         'projects':projectsList,
+        'social':socialData,
     }
     return HttpResponse(template.render(context,request))
 
