@@ -64,7 +64,7 @@ def about(request):
 
 def mywork(request):
     template = loader.get_template('mywork.html')
-    projectsList = projects.objects.order_by('order').reverse()
+    projectsList = projects.objects.order_by('order')
     context = {
         'projects':projectsList,
     }
