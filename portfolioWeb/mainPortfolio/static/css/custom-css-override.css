@@ -8,6 +8,10 @@ img {
     height: auto;
 }
 
-div{
+body{
     background-color: #FAF9FF;
+}
+
+header{
+    background-color: white;
 }
