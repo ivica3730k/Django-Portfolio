@@ -30,7 +30,7 @@ class aboutMe(models.Model):
         verbose_name = "About Me"
         verbose_name_plural = "About Me"
     mainHeadline = models.CharField(max_length = 100)
-    shortIntro = HTMLField('About me - short intro')
+    shortIntro = models.TextField()
     mainContent = HTMLField('About me - main content')
     short = models.CharField(max_length = 100)
     image = models.ImageField()
@@ -41,9 +41,9 @@ class skills(models.Model):
     class Meta:
         verbose_name = "Skill"
         verbose_name_plural = "My Skills"
-    name = models.TextField()
+    name = models.CharField(max_length = 20)
     description = models.TextField()
-    label = models.TextField()
+    label = models.CharField(max_length = 20)
 
 class facts(models.Model):
     def __str__(self):
@@ -71,6 +71,7 @@ class qualifications(models.Model):
         verbose_name_plural = "My Qualifications"
     title = models.CharField(max_length = 100)
     content = HTMLField('About qualification')
+    order = models.IntegerField(default=0)
 
 class projects(models.Model):
     def __str__(self):
