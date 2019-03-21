@@ -81,6 +81,7 @@ class projects(models.Model):
         verbose_name_plural = "My Projects"
     name = models.CharField(max_length = 100)
     description = HTMLField('Describe your project:')
+    order = models.IntegerField(default=0)
 
 class socialLinks(models.Model):
     def __str__(self):

@@ -33,7 +33,7 @@ class aboutData():
         except:
             self.expertises = False
         try:
-            self.qualifications = qualifications.objects.order_by('id').reverse()
+            self.qualifications = qualifications.objects.order_by('order')
         except:
             self.qualifications = False
 
