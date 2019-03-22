@@ -1,255 +1,224 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
-
-<head>
-    <meta name="google-site-verification" content="U90Isn4CrTP3WbNEObKYBsed8BqhXhIBnMdZuN_bvbE" />
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
-    <!-- Author Meta -->
-    <meta name="author" content="colorlib">
-    <!-- Meta Description -->
-    <meta name="description" content="">
-    <!-- Meta Keyword -->
-    <meta name="keywords" content="">
-    <!-- meta character set -->
-    <meta charset="UTF-8">
-    <!-- Site Title -->
-    <title>Ivica Matic - Software Engineer</title>
-
-    <!--
-			CSS
-			============================================= -->
-    <link rel="stylesheet" href="{% static 'css/linearicons.css'%}">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
-    <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
-    <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/custom-css-override.css' %}">
-
-
-</head>
-
-<body>
-    <!--Header start-->
-    
-    <header id="header">
-        <div class="container main-menu">
+   <head>
+      <meta name="google-site-verification" content="U90Isn4CrTP3WbNEObKYBsed8BqhXhIBnMdZuN_bvbE" />
+      <!-- Mobile Specific Meta -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Favicon-->
+      <link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+      <!-- Author Meta -->
+      <meta name="author" content="colorlib">
+      <!-- Meta Description -->
+      <meta name="description" content="">
+      <!-- Meta Keyword -->
+      <meta name="keywords" content="">
+      <!-- meta character set -->
+      <meta charset="UTF-8">
+      <!-- Site Title -->
+      <title>Ivica Matic - Software Engineer</title>
+      <!--
+         CSS
+         ============================================= -->
+      <link rel="stylesheet" href="{% static 'css/linearicons.css'%}">
+      <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+      <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+      <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
+      <link rel="stylesheet" href="{% static 'css/nice-select.css'%}">
+      <link rel="stylesheet" href="{% static 'css/animate.min.css'%}">
+      <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
+      <link rel="stylesheet" href="{% static 'css/main.css' %}">
+      <link rel="stylesheet" href="{% static 'css/custom-css-override.css' %}">
+   </head>
+   <body>
+      <!--Header start-->
+      <header id="header">
+         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
-                <div id="logo">
-                    Ivica Matic
-                 </div>
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About me</a></li>
-                        <li><a href="/mywork">My work</a></li>
-                        
-                    </ul>
-                </nav>
-                <!-- #nav-menu-container -->
+               <div id="logo">
+                  Ivica Matic
+               </div>
+               <nav id="nav-menu-container">
+                  <ul class="nav-menu">
+                     <li><a href="/">Home</a></li>
+                     <li><a href="/about">About me</a></li>
+                     <li><a href="/mywork">My work</a></li>
+                  </ul>
+               </nav>
+               <!-- #nav-menu-container -->
             </div>
-        </div>
-    </header>
-    <!--Header-end-->
-    
-    <!-- start banner Area -->
-    
-    <section class="banner-area pt-0">
-        {%if head%}
-        <div class="container pt-0">
-
-                <div class="d-md-none">
-                        <!-- if it is small device -->
-                        <div class="row  align-items-center justify-content-between">
-                            <div class="col-lg-6 col-md-6 banner-left">
-                                <h6>{{head.intro}}</h6>
-                                <h1>{{head.heading}}</h1>
-                                <p>
-                                    {{head.description}}
-    
-                                </p>
-    
-                            </div>
-    
-                        </div>
-                    </div>
-                    
-            <div class="d-none d-md-block">
-                <!-- if it is not small device -->
-                <div class="row fullscreen align-items-center justify-content-between">
-                    <div class="col-lg-6 col-md-6 banner-left">
-                        <h6>{{head.intro}}</h6>
-                        <h1>{{head.heading}}</h1>
-                        <p>
-                            {{head.description}}
-
-                        </p>
-
-                        <a href="/about" class="primary-btn text-uppercase">discover now</a>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
-                        <img class="img-fluid" src="{{head.image.url}}" alt="">
-
-                    </div>
-
-                </div>
-        {%endif%}       
-    </section>
-    
-    
-    <!-- End banner Area -->
-
-    <!-- Start home-about Area -->
-    
-    <section class="home-about-area">
-        {%if aboutMe%}
-        <div class="container">
+         </div>
+      </header>
+      <!--Header-end-->
+      <!-- start banner Area -->
+      <section class="banner-area pt-0">
+         {%if head%}
+         <div class="container pt-0">
+         <div class="d-md-none">
+            <!-- if it is small device -->
+            <div class="row  align-items-center justify-content-between">
+               <div class="col-lg-6 col-md-6 banner-left">
+                  <h6>{{head.intro}}</h6>
+                  <h1>{{head.heading}}</h1>
+                  <p>
+                     {{head.description}}
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="d-none d-md-block">
+            <!-- if it is not small device -->
+            <div class="row fullscreen align-items-center justify-content-between">
+               <div class="col-lg-6 col-md-6 banner-left">
+                  <h6>{{head.intro}}</h6>
+                  <h1>{{head.heading}}</h1>
+                  <p>
+                     {{head.description}}
+                  </p>
+                  <a href="/about" class="primary-btn text-uppercase">discover now</a>
+               </div>
+               <div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
+                  <img class="img-fluid" src="{{head.image.url}}" alt="">
+               </div>
+            </div>
+         </div>
+         {%endif%}       
+      </section>
+      <!-- End banner Area -->
+      <!-- Start home-about Area -->
+      <section class="home-about-area">
+         {%if aboutMe%}
+         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <div class="col-lg-6 col-md-6 home-about-left">
-                    <img class="img-fluid" src="{{aboutMe.image.url}}" alt="">
-                </div>
-                <div class="col-lg-6 col-md-6 home-about-right">
-                    <h6>About Me</h6>
-                    <h1 class="text-uppercase">Personal Details</h1>
-                    <p>
-                        {{aboutMe.short}}
-                    </p>
-                    <a href="/about" class="primary-btn text-uppercase">View Full Details</a>
-                </div>
+               <div class="col-lg-6 col-md-6 home-about-left">
+                  <div class="d-md-none">
+                     <!-- if it is small device -->
+                     <img class="img-fluid" src="{{head.image.url}}" alt="">
+                  </div>
+                  <div class="d-none d-md-block">
+                     <!-- if it is not small device -->
+                     <img class="img-fluid" src="{{aboutMe.image.url}}" alt="">
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-6 home-about-right">
+                  <h6>About Me</h6>
+                  <h1 class="text-uppercase">Personal Details</h1>
+                  <p>
+                     {{aboutMe.short}}
+                  </p>
+                  <a href="/about" class="primary-btn text-uppercase">View Full Details</a>
+               </div>
             </div>
-        </div>
-        {%endif%}
-    </section>
-    
-    
-    <!-- End home-about Area -->
-
-    <!-- Start services Area -->
-    
-    <section class="services-area">
-        {%if skills%}
-        <div class="container">
+         </div>
+         {%endif%}
+      </section>
+      <!-- End home-about Area -->
+      <!-- Start services Area -->
+      <section class="services-area">
+         {%if skills%}
+         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="menu-content  col-lg-7">
-                    <div class="title text-center">
-                        <h1 class="mb-10">What can I do?</h1>
-                        <p></p>
-                    </div>
-                </div>
+               <div class="menu-content  col-lg-7">
+                  <div class="title text-center">
+                     <h1 class="mb-10">What can I do?</h1>
+                     <p></p>
+                  </div>
+               </div>
             </div>
             <div class="row">
-                {%for skill in skills%}
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services">
-                        <span class="lnr lnr-{{skill.label}}"></span>
-                        <a href="#"><h4>{{skill.name}}</h4></a>
-                        <p>
-                            {{skill.description}}
-                        </p>
-                    </div>
-                </div>
-                {%endfor%}
+               {%for skill in skills%}
+               <div class="col-lg-4 col-md-6">
+                  <div class="single-services">
+                     <span class="lnr lnr-{{skill.label}}"></span>
+                     <a href="#">
+                        <h4>{{skill.name}}</h4>
+                     </a>
+                     <p>
+                        {{skill.description}}
+                     </p>
+                  </div>
+               </div>
+               {%endfor%}
             </div>
-        </div>
-        {%endif%}
-    </section>
-    
-    
-    <!-- End services Area -->
-
-    <!-- Start fact Area -->
-    
-    <section class="facts-area pt-40 pb-40" id="facts-area" style ="margin-bottom:0px;">
-        {%if facts%}
-        <div class="container">
+         </div>
+         {%endif%}
+      </section>
+      <!-- End services Area -->
+      <!-- Start fact Area -->
+      <section class="facts-area pt-40 pb-40" id="facts-area" style ="margin-bottom:0px;">
+         {%if facts%}
+         <div class="container">
             <div class="row">
-                {%for fact in facts%}
-                <div class="col-lg-3 col-md-6 single-fact">
-                    <h1 class="counter">{{fact.count_to_number}}</h1>
-                    <p>{{fact.description}}</p>
-                </div>
-                {%endfor%}
-
+               {%for fact in facts%}
+               <div class="col-lg-3 col-md-6 single-fact">
+                  <h1 class="counter">{{fact.count_to_number}}</h1>
+                  <p>{{fact.description}}</p>
+               </div>
+               {%endfor%}
             </div>
-        </div>
-        {%endif%}
-    </section>
-    
-    <!-- end fact Area -->
-
-    <!-- start footer Area -->
-    <footer class="footer-area pt-20">
-        <div class="container">
+         </div>
+         {%endif%}
+      </section>
+      <!-- end fact Area -->
+      <!-- start footer Area -->
+      <footer class="footer-area pt-20">
+         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h4>About Me</h4>
-                        <p>
-                            We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h4>This page...</h4>
-                        <p>was made using Django, graphical template provided by colorlib</p>
-                        <p class="footer-text">
-
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-                    <div class="single-footer-widget">
-                        {%if social.valid%}
-                        <h4>Follow Me</h4>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            
-                            <a href="{{social.linkedin}}"><i class="fa fa-linkedin"></i></a>
-                            <a href="{{social.github}}"><i class="fa fa-github"></i></a>
-                            <a href="{{social.facebook}}"><i class="fa fa-facebook"></i></a>
-
-                        </div>
-                        {%endif%}
-                    </div>
-                </div>
+               <div class="col-lg-5 col-md-6 col-sm-6">
+                  <div class="single-footer-widget">
+                     <h4>About Me</h4>
+                     <p>
+                        We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-5 col-md-6 col-sm-6">
+                  <div class="single-footer-widget">
+                     <h4>This page...</h4>
+                     <p>was made using Django, graphical template provided by colorlib</p>
+                     <p class="footer-text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                           document.write(new Date().getFullYear());
+                        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                     </p>
+                  </div>
+               </div>
+               <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                  <div class="single-footer-widget">
+                     {%if social.valid%}
+                     <h4>Follow Me</h4>
+                     <p>Let us be social</p>
+                     <div class="footer-social d-flex align-items-center">
+                        <a href="{{social.linkedin}}"><i class="fa fa-linkedin"></i></a>
+                        <a href="{{social.github}}"><i class="fa fa-github"></i></a>
+                        <a href="{{social.facebook}}"><i class="fa fa-facebook"></i></a>
+                     </div>
+                     {%endif%}
+                  </div>
+               </div>
             </div>
-        </div>
-    </footer>
-    <!-- End footer Area -->
-
-    <script src="{% static 'js/vendor/jquery-2.2.4.min.js'%}"></script>
-    <script src="{% static 'js/popper.min.js'%}"></script>
-    <script src="{% static 'js/vendor/bootstrap.min.js'%}"></script>
-    <script src="{% static 'js/easing.min.js'%}"></script>
-    <script src="{% static 'js/hoverIntent.js'%}"></script>
-    <script src="{% static 'js/superfish.min.js'%}"></script>
-    <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
-    <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
-    <script src="{% static 'js/jquery.tabs.min.js'%}"></script>
-    <script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
-    <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
-    <script src="{% static 'js/waypoints.min.js'%}"></script>
-    <script src="{% static 'js/jquery.counterup.min.js'%}"></script>
-    <script src="{% static 'js/simple-skillbar.js'%}"></script>
-    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
-    <script src="{% static 'js/mail-script.js'%}"></script>
-    <script src="{% static 'js/main.js'%}"></script>
-</body>
-
+         </div>
+      </footer>
+      <!-- End footer Area -->
+      <script src="{% static 'js/vendor/jquery-2.2.4.min.js'%}"></script>
+      <script src="{% static 'js/popper.min.js'%}"></script>
+      <script src="{% static 'js/vendor/bootstrap.min.js'%}"></script>
+      <script src="{% static 'js/easing.min.js'%}"></script>
+      <script src="{% static 'js/hoverIntent.js'%}"></script>
+      <script src="{% static 'js/superfish.min.js'%}"></script>
+      <script src="{% static 'js/jquery.ajaxchimp.min.js'%}"></script>
+      <script src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
+      <script src="{% static 'js/jquery.tabs.min.js'%}"></script>
+      <script src="{% static 'js/jquery.nice-select.min.js'%}"></script>
+      <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+      <script src="{% static 'js/waypoints.min.js'%}"></script>
+      <script src="{% static 'js/jquery.counterup.min.js'%}"></script>
+      <script src="{% static 'js/simple-skillbar.js'%}"></script>
+      <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+      <script src="{% static 'js/mail-script.js'%}"></script>
+      <script src="{% static 'js/main.js'%}"></script>
+   </body>
 </html>
