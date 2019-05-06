@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from mainPortfolio.models import *
 from django.template import loader
-
+#added dummy comment
 class indexData():
     def __init__(self):
         try:
